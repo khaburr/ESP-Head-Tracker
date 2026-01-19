@@ -203,7 +203,6 @@ void loop()
             Serial.println("UDP Send Error");
         }
     } else {
-        // Jeśli tu wejdzie, oznacza to problem z adresem IP lub buforem
         Serial.println("UDP Begin Error");
     }
 
