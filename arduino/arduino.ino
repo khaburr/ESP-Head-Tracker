@@ -279,7 +279,7 @@ void Mahony_update(float ax, float ay, float az, float gx, float gy, float gz, f
     q[3] = q[3] * recipNorm;
 }
 
-// Function for Big-Endian
+// Function for Little-Endian
 void packFloat(uint8_t* buf, int offset, float value)
 {
     union {
@@ -287,7 +287,7 @@ void packFloat(uint8_t* buf, int offset, float value)
         uint8_t b[4];
     } data;
     data.f = value;
-    // Format Big-Endian
+    // Format Little-Endian
     buf[offset] = data.b[0];
     buf[offset + 1] = data.b[1];
     buf[offset + 2] = data.b[2];
